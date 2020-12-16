@@ -1,6 +1,6 @@
-#include "llww.h"
+#include "llww.h" // include a library
 int main(){
-	HideConsole();
-	msgbox("Test name", "Test str");
-	return 0;
+	HideConsole(); // Hide a console
+	msgbox("Test name", "Test str"); // Create a messagebox
+	return 0; 
 }

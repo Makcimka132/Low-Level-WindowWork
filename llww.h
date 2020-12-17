@@ -1,5 +1,5 @@
 #include <windows.h>
-void msgbox(char *name, char *str);
+void msgbox(char *name, char *str, short type);
 void HideConsole();
 void ShowConsole();
 void DestroyConsole();

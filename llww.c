@@ -4,7 +4,14 @@
 
 HWND hwnd;
 
-void msgbox(char *name, char *str){MessageBox(NULL,name,str,MB_OK);}
+void msgbox(char *name, char *str, short type){
+	if (type == 0){MessageBox(NULL, name, str, MB_OK);}
+	else if (type == 1) { MessageBox(NULL, name, str, MB_OK | MB_ICONERROR); }
+	else if (type == 2) { MessageBox(NULL, name, str, MB_OK | MB_ICONWARNING); }
+	else if (type == 3) { MessageBox(NULL, name, str, MB_OK | MB_ICONQUESTION); }
+	else if (type == 4) { MessageBox(NULL, name, str, MB_OK | MB_ICONINFORMATION); }
+	else {MessageBox(NULL, name, str, MB_OK);}
+}
 
 void HideConsole()
 {

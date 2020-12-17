@@ -18,3 +18,18 @@ void DestroyConsole()
 {
 	HWND hwnd = GetConsoleWindow();DestroyWindow(hwnd);
 }
+
+void InitWindow(int x,int y,int w,int h, char *name)
+{
+	WNDCLASSA wcl;
+	  memset(&wcl, 0, sizeof(WNDCLASSA) );
+	  wcl.lpszClassName = name;
+	  wcl.lpfnWndProc = DefWindowProcA;
+	RegisterClassA(&wcl);
+
+	HWND hwnd;
+	hwnd = CreateWindow(name, name, WS_OVERLAPPEDWINDOW,
+		x, y, w, h, NULL, NULL, NULL, NULL);
+
+	ShowWindow(hwnd, SW_SHOWNORMAL);
+}

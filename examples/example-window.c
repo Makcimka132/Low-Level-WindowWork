@@ -10,7 +10,7 @@ int main()
 		DispatchMessage(&msg);
 		if ((msg.message == 161) && (msg.wParam == 20)) // if press "Close"...
 		{
-			return 0; // Close a programm
+			return 0; // Close a program
 		}
 	}
     return 0;

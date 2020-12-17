@@ -13,3 +13,8 @@ void ShowConsole()
 {
     HWND hwnd = GetConsoleWindow();ShowWindow(hwnd,1);
 }
+
+void DestroyConsole()
+{
+	HWND hwnd = GetConsoleWindow();DestroyWindow(hwnd);
+}
